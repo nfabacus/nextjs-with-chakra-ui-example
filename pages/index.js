@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { Heading, Button, Stack, Box } from "@chakra-ui/react"
 
 export default function Home() {
   return (
@@ -10,14 +11,32 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+        <Heading as="h1" fontSize={{ base: "24px", md: "40px", lg: "5rem" }}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        </Heading>
+        <Heading as="h2" size="lg">
+          Heading Size Test
+        </Heading>
+        <Box bg="tomato" m={3} w={{ base: "5rem", md: "10rem", lg: "20rem" }} p={4} color="white">
+          This is the Box
+        </Box>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <Stack spacing={4} direction="row" align="center">
+          <Button colorScheme="brand" size="md">Click me</Button>
+          <Box bg="brand.500">Welcome</Box>
+          <Button colorScheme="teal" size="xs">
+            Button
+          </Button>
+          <Button colorScheme="teal" size="sm">
+            Button
+          </Button>
+          <Button colorScheme="teal" size="md">
+            Button
+          </Button>
+          <Button colorScheme="teal" size="lg">
+            Button
+          </Button>
+        </Stack>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
